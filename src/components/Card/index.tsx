@@ -5,14 +5,17 @@ import React from 'react'
 function tagOrTagList(props: {
     tag: string | string[]
 }) {
-    return (<>
-        {
-            chekType(props.tag, "String") ? <span className='p-0.5 text-white text-xs border rounded-sm'>{props.tag}</span> :
-                [...props.tag as string[]].map((item) => {
-                    return <span key={item} className='inline-block p-0.5 text-white text-xs border rounded-sm mr-1'>{item}</span>
-                })
+    return (
+        <>
+            {
+                chekType(props.tag, "String") ? <span className='p-0.5 text-white text-xs border rounded-sm'>{props.tag}</span> :
+                    [...props.tag as string[]].map((item) => {
+                        return <span key={item} className='inline-block p-0.5 text-white text-xs border rounded-sm mr-1'>{item}</span>
+                    })
 
-        }</>)
+            }
+        </>
+    )
 }
 
 function returnTagState(props: { titleTagState: string }) {
@@ -28,8 +31,6 @@ function getTitleTag(props: {
     titleTag: boolean,
     titleTagState: projectStatusType
 }) {
-
-
     return (<>
         {
             props.titleTag ?
@@ -38,7 +39,8 @@ function getTitleTag(props: {
         }
     </>)
 }
-function Card(props: {
+
+export default function Card(props: {
     id: any,
     path: string,
     title: string,
@@ -64,4 +66,3 @@ function Card(props: {
         </div>
     </>)
 }
-export default Card;

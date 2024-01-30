@@ -33,11 +33,11 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/components/TableContents.jsx",
+    "src/components/index.jsx",
     "src/pages/_app.ss",
     "src/app/_app.js",
-    "src/pages/blogFile/[name].js"
-  ],
+    "src/pages/blogFile/[name].jsx"
+, "src/pages/_app.js", "src/components/ArticleTemplate/index.jsx"  ],
   "exclude": [
     "node_modules"
   ]

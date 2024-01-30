@@ -1,32 +1,17 @@
 import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote } from 'next-mdx-remote'
-// import Layout from "../../components/Layout";
 import slug from 'remark-slug'
 import remarkGfm from 'remark-gfm'
 import rehypePrism from '@mapbox/rehype-prism'
-import TableContents from '@/components/TableContents';
-import React, { useState } from 'react';
+import React from 'react';
+import ArticleTemplate from "@/components/ArticleTemplate"
+import NavBar from '@/components/NavBar';
 
-// import { useInView } from 'react-intersection-observer';
 export default function BlogPage(props) {
-    // const [id, setId] = useState(array[0])
     return (
-        <div className="wrapper">
-            {/* <Layout href='/blog' full={true} theme={props.theme} setTheme={props.setTheme}> */}
-            {/* <div>{props.source.frontmatter.title}</div> */}
-            <div className='grid grid-cols-4 gap-6 relative'>
-                <div className='markdown xl:col-span-3 col-span-5 p-5 rounded-lg dark:bg-[#222222] box-shadow bg-white'>
-                    <MDXRemote {...props.source} />
-                </div>
-                <div className='xl:block hidden'>
-                    <div className='sticky top-24 p-5 rounded-lg dark:bg-[#222222] box-shadow bg-white'>
-                        <h3 className="text-xl text-gray-900 dark:text-gray-100 dark:opacity-90 font-bold pb-4">目录</h3>
-                        <TableContents idTable={"id"} {...props.tocElement}></TableContents>
-                    </div>
-                </div>
-            </div>
-            {/* </Layout> */}
-        </div>
+        <>
+            <NavBar />
+            <ArticleTemplate idTable={props.idTable} tocElement={props.tocElement} source={props.source} />
+        </>
     )
 }
 

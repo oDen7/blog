@@ -1,31 +1,14 @@
-import { ALGLIST, JAVASCRIPTLIST, NODEJSLIST, algTag, jsTag, nodejsTag } from "@/global"
-import { nodeJsList } from "./nodejsDict";
+import { blogList } from "./blogDict";
 import { jsList } from "./jsDict";
 import { projectlist } from "./projectDict";
+import { nodeJsList } from "./nodejsDict";
 import { algList } from "./algDict";
+import { boxList } from "./boxDict";
+import { ccpList } from "./ccpDict";
+import { cntList } from "./cntDict";
+import { dsList } from "./dsDict";
 
-export { nodeJsList, jsList, projectlist, algList };
+export { nodeJsList, jsList, projectlist, algList, boxList, blogList, ccpList, cntList, dsList };
 
-export const sortList: articleListType[] = [
-    {
-        id: "blogtitle1",
-        title: "javascript",
-        desc: "学习整理javaScript",
-        path: `${JAVASCRIPTLIST}`,
-        tag: jsTag as string
-    }, {
-        id: "blogtitle2",
-        title: "nodejs",
-        desc: "学习整理nodeJS",
-        path: `${NODEJSLIST}`,
-        tag: [jsTag, nodejsTag] as string[]
-    },
-    {
-        id: "blogtitle3",
-        title: "算法",
-        desc: "常用算法以及leetcode题",
-        path: `${ALGLIST}`,
-        tag: [jsTag, algTag] as string[]
-    }
-]
+
 

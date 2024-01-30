@@ -47,7 +47,7 @@ const list = [
 // ]
 export default function Home() {
   return (
-    <main className="w-full h-full p-24 bg-black">
+    <main className="w-full h-full p-24">
       <div className="text-center text-white text-4xl">oDen7的个人博客</div>
       <div className="w-full h-full flex justify-center">
         {list.map(item => {

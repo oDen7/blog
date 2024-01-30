@@ -1,6 +1,8 @@
 import { MDXProvider } from '@mdx-js/react';
+import "@/styles/globals.css";
 import "@/styles/prism.css"
 import "@/styles/markdown.css"
+
 
 function MyApp({ Component, pageProps }) {
   // 定义 mdx 中语法的映射组件
